@@ -1,0 +1,264 @@
+#root,
+body {
+  height: 100vh;
+
+  padding: 0;
+  margin: 0;
+}
+
+
+
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  margin: 0;
+  padding-top: 40vh;
+
+
+  padding-right: 10%;
+  padding-left: 10%;
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+
+
+  text-align: center;
+}
+
+
+
+.color-blue {
+
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  z-index: 3;
+  border-radius: 8px;
+
+
+
+  cursor: pointer;
+}
+
+
+.color-green {
+  background-color: green;
+
+
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  flex: 1;
+
+  margin: 24px;
+  color: white;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+}
+
+
+
+.ripple-blue {
+  width: 150px;
+  height: 150px;
+  background-color: blue;
+
+  color: white;
+
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  font-family: arial;
+
+  line-height: 150px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ripple-blue:before {
+  position: absolute;
+  content: '';
+  border: 5px solid blue;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  border-radius: 50%;
+  animation: animate 2s linear infinite;
+}
+
+.ripple-blue:after {
+  position: absolute;
+  content: '';
+  border: 5px solid blue;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  border-radius: 50%;
+  animation: animate 2s 1s linear infinite;
+}
+
+.ripple-green {
+  width: 150px;
+  height: 150px;
+  background-color: green;
+
+  color: white;
+
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  font-family: arial;
+
+  line-height: 150px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ripple-green:before {
+  position: absolute;
+  content: '';
+  border: 5px solid green;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  border-radius: 50%;
+  animation: animate 2s linear infinite;
+}
+
+.ripple-green:after {
+  position: absolute;
+  content: '';
+  border: 5px solid green;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  border-radius: 50%;
+  animation: animate 2s 1s linear infinite;
+}
+
+
+@keyframes animate {
+  100% {
+    transform: scale(4);
+    opacity: 0
+  }
+}
+
+
+.reciever-avatar {
+
+  height: 150px;
+  width: 150px;
+
+  border-radius: 50%;
+
+
+
+  background-color: green;
+
+}
+
+
+.send-button {
+  background-color: blue;
+
+
+  position: relative;
+
+
+  margin: 24px;
+  flex: 1;
+  color: white;
+  border-radius: 8px;
+
+
+
+  cursor: pointer;
+
+}
+
+.send-button span {
+  z-index: 1;
+
+  position: absolute;
+
+  top: 40%;
+  left: 45%;
+
+}
+
+
+.reciever-popup {
+  height: 100px;
+  width: 100px;
+
+  border-radius: 50%;
+
+  color: white;
+
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+
+  display: flex;
+  padding: 1px;
+
+  background-color: green;
+
+
+  cursor: pointer;
+
+}
+
+
+dialog {
+  z-index: 10;
+  margin-top: 10px;
+  background: green;
+  border: none;
+  border-radius: 8px;
+
+
+  color: white;
+}
+
+dialog span {
+  display: block;
+
+  margin: 12px;
+}
+
+
+dialog button{
+  margin: 12px;
+}
+
+dialog::backdrop {
+  background-color: hsl(250, 100%, 50%, 0.25);
+}
