@@ -1,0 +1,18 @@
+.dashboardContainer{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(245, 222, 179, 0.212);
+
+}
+.dashboardContainer .dashboardWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashboardContainer .dashboardWrapper .sendButton{
+    margin-right: 5vw;
+}
